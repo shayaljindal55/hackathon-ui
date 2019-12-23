@@ -1,0 +1,11 @@
+.footer {
+    width: 100%;
+    bottom: 5px;
+    padding-top: 30px;
+    position: absolute;
+}
+.has-text-centered {
+  letter-spacing: 0.8px;
+  text-align: center;
+  color: #44464d;
+}

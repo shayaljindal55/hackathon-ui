@@ -1,0 +1,76 @@
+.nav-pink {
+    width: 100%;
+}
+.wd-15{
+    width: 45%;
+}
+.btn-side-nav {
+        width: 100px;
+        height: 50px;
+        color: white;
+        border: #0000A0;
+        background: #0000A0;
+    
+}
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 64px;
+  margin: 20px 0px 15px 0px;
+}
+
+.demo-is-mobile .demo-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+h1.demo-app-name {
+  margin-left: 8px;
+}
+
+.demo-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.demo-is-mobile .demo-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+div#wrapperHeader {
+/* width:100%;
+height:200px; 
+background:url(../../../assets/images/hacky-logo.png) repeat-x 0 0;
+text-align:center; */
+    /* width: 100%; */
+    /* height: 200px; */
+    background: url(../../../assets/images/hacky-logo.png);
+    /* text-align: center; */
+    /* padding-left: 26%; */
+    /* margin-bottom: 4%; */
+}
+
+div#wrapperHeader div#header {
+width:1000px;
+height:200px;
+margin:0 auto;
+}
+
+div#wrapperHeader div#header img {
+width:100px; /* the width of the logo image */
+height:50px; /* the height of the logo image */
+margin:0 auto;
+}
+.demo-margin {
+    margin-top: 3%;
+}

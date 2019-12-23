@@ -12,16 +12,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatTabsModule } from '@angular/material/tabs';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { TabContentComponent } from './components/tab-content/tab-content.component';
+import { CreateOutcomePlanComponent } from './components/outcome-plan/create-outcome-plan/create-outcome-plan.component';
+import { CreateAssessmentComponent } from './components/assessment/create-assessment/create-assessment.component';
+import { CreatePersonComponent } from './components/person/create-person/create-person.component';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    TabContentComponent,
+    CreatePersonComponent,
+    CreateOutcomePlanComponent,
+    CreateAssessmentComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +38,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     NgbModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
@@ -41,7 +51,7 @@ import {MatDialogModule} from '@angular/material/dialog';
   ],
   entryComponents: [HeaderComponent],
   exports: [MatToolbarModule, MatIconModule],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
