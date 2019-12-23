@@ -20,7 +20,7 @@ import { TabContentComponent } from './components/tab-content/tab-content.compon
 import { CreateOutcomePlanComponent } from './components/outcome-plan/create-outcome-plan/create-outcome-plan.component';
 import { CreateAssessmentComponent } from './components/assessment/create-assessment/create-assessment.component';
 import { CreatePersonComponent } from './components/person/create-person/create-person.component';
-import { AppService } from './app.service';
+import {HttpClientModule} from '@angular/common/http' ;
 
 @NgModule({
   declarations: [
@@ -38,6 +38,7 @@ import { AppService } from './app.service';
     NgbModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
@@ -51,7 +52,7 @@ import { AppService } from './app.service';
   ],
   entryComponents: [HeaderComponent],
   exports: [MatToolbarModule, MatIconModule],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
