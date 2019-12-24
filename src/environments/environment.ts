@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  awsAPIUrl: 'https://eaxv0kctz3.execute-api.ap-southeast-1.amazonaws.com/dev/'
+  personAWSAPIUrl: ' https://0k5s6uq7g6.execute-api.ap-southeast-1.amazonaws.com/dev'
 };

@@ -1,4 +1,4 @@
-<form [formGroup]="myform" class="main-container">
+<form [formGroup]="form" class="main-container">
   <div class="sub-form">
     <div class="form-group">
       <div class="col-md-12">
@@ -12,8 +12,7 @@
         <label>ID Type</label>
         <select class="form-control" formControlName="idType">
           <option selected value="">Select</option>
-         
-              <option *ngFor="let idTypeOpt of idTypes" [value]="idTypeOpt">{{idTypeOpt.type}}
+              <option *ngFor="let idTypeOpt of idTypes" [value]="idTypeOpt.id">{{idTypeOpt.type}}
           </option>
         </select>
       </div>
@@ -29,21 +28,21 @@
     <div class="form-group">
       <div class="col-md-12">
         <label>Contact Number</label>
-        <input type="email" class="form-control" formControlName="contactNumber" required>
+        <input type="text" class="form-control" formControlName="contactNumber" required>
       </div>
     </div>
 
     <div class="form-group">
       <div class="col-md-12">
         <label>Date Of Birth</label>
-        <input type="password" class="form-control" formControlName="dateOfBirth" required>
+        <input type="date" class="form-control" formControlName="dateOfBirth" required>
       </div>
     </div>
 
     <div class="form-group">
       <div class="col-md-12">
         <label>Email Address</label>
-        <input type="password" class="form-control" formControlName="emailAddress" required>
+        <input type="email" class="form-control" formControlName="emailAddress" required>
       </div>
     </div>
 
@@ -52,7 +51,7 @@
         <label>Language</label>
         <select class="form-control" formControlName="language">
           <option selected value="">Select</option>
-          <option *ngFor="let lang of languages" [value]="lang">{{lang.language}}
+          <option *ngFor="let lang of languages" [value]="lang.id">{{lang.language}}
           </option>
         </select>
       </div>
@@ -61,12 +60,12 @@
     <div class="form-group">
       <div class="col-md-12">
         <label>Address</label>
-        <textarea type="password" class="form-control" formControlName="address" required></textarea>
+        <textarea type="text" class="form-control" formControlName="address" required></textarea>
       </div>
     </div>
     <div class="text-center">
       <button type="button" class="btn btn-secondary btn-size">CANCEL</button>
-      <button type="button" class="btn-color-override btn btn-primary btn-size">SUBMIT</button>
+      <button type="button" class="btn-color-override btn btn-primary btn-size" (click)="submitPerson()">SUBMIT</button>
     </div>
   </div>
 </form>
